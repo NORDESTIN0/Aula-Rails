@@ -1,0 +1,2 @@
+class PcType < ApplicationRecord
+end
