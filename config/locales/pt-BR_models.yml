@@ -1,0 +1,20 @@
+'pt-BR':
+  activerecord:
+    models:
+      post: Postagens
+      mining_type: Tipo de mineração
+    attributes:
+      post:
+        id: Código
+        name: Nome
+        title: Titulo
+        mining_type: Tipo de mineração
+        mining_type_id: ID do tipo de mineração
+        updated_at: Atualizado em
+        created_at: Criado em
+      mining_type:
+        id: Código
+        name: Nome
+        title: Titulo
+        updated_at: Atualizado em
+        created_at: Criado em
