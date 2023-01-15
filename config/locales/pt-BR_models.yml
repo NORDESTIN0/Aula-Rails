@@ -1,8 +1,12 @@
 'pt-BR':
   activerecord:
     models:
-      post: Postagens
-      mining_type: Tipo de mineração
+      post:
+        one: Postagem
+        other: Postagens
+      mining_type: 
+        one: Tipo de Mineração
+        other: TIpos de Mineração
     attributes:
       post:
         id: Código
