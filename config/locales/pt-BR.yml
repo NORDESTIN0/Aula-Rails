@@ -1,8 +1,12 @@
 pt-BR:
   actual_locale: "Português do Brasil"
   hello: "Bom dia!!"
+  menu: "Sua linguagem é"
   links:
       edit: "Editar"
       show: "Mostrar"
       delete: "Deletar"
       confirm: "Você deseja deletar?"
+  language:
+      english: "Inglês"
+      portuguese: "Português"
