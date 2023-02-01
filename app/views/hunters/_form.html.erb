@@ -1,0 +1,27 @@
+<%= form_with(model: hunter, local: true) do |form| %>
+  <% if hunter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hunter.errors.count, "error") %> prohibited this hunter from being saved:</h2>
+
+      <ul>
+      <% hunter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :avatar_url %>
+    <%= form.text_field :avatar_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gun_url %>
+    <%= form.text_field :gun_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

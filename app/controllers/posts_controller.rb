@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :set_mining_type_options, only: [:new, :edit, :update, :create]
+  before_action :set_hunter_options, only: [:new, :edit, :update, :create]
 
   # GET /posts or /posts.json
   def index
@@ -9,6 +10,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @posts = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -57,12 +59,17 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  
   private
-    def set_mining_type_options
-      @mining_type_options = MiningType.all.pluck(:name, :id)
-    end
-    # Use callbacks to share common setup or constraints between actions.
+  def set_mining_type_options
+    @mining_type_options = MiningType.all.pluck(:name, :id)
+  end
+  
+  def set_hunter_options
+    @hunter_options = Hunter.all.pluck(:avatar_url, :gun_url)
+  end
+  # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
     end

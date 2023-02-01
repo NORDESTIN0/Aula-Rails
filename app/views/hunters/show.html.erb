@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @hunter.avatar_url %>
+</p>
+
+<p>
+  <strong>Gun url:</strong>
+  <%= @hunter.gun_url %>
+</p>
+
+<%= link_to 'Edit', edit_hunter_path(@hunter) %> |
+<%= link_to 'Back', hunters_path %>

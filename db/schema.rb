@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_01_172603) do
+ActiveRecord::Schema.define(version: 2023_02_01_145235) do
+
+  create_table "hunters", force: :cascade do |t|
+    t.string "avatar_url"
+    t.string "gun_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "mining_types", force: :cascade do |t|
     t.string "name"
@@ -32,6 +39,7 @@ ActiveRecord::Schema.define(version: 2022_12_01_172603) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "mining_type_id"
+    t.integer "hunter_id"
     t.index ["mining_type_id"], name: "index_posts_on_mining_type_id"
   end
 
