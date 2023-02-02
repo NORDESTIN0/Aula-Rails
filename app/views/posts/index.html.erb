@@ -8,16 +8,20 @@
     <tr>
       <th><%= @posts.human_attribute_name(:name)%></th>
       <th><%= @posts.human_attribute_name(:title)%></th>
-      <th>Hunters</th>
-      <th>Guns</th>
+      <th>Hunter Image</th>
+      <th>Gun Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
-    <% @posts.each do |post| %>
+    <% @posts.each do |post, hunter| %>
       <tr>
         <td><%= post.name %></td>
         <td><%= post.title %></td>
+        <% if post.hunter %>
+          <td><%= image_tag post&.hunter&.avatar_url, width:100, height: 100 %></td>
+          <td><%= image_tag post&.hunter&.gun_url, width:100, height: 100 %></td>
+        <% end %>
         <td><%= link_to t('links.show'), post %></td>
         <td><%= link_to t('links.edit'), edit_post_path(post) %></td>
         <td><%= link_to t('links.delete'), post, method: :delete, data: { confirm: t('links.confirm') } %></td>
