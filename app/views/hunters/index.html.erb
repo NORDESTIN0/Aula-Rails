@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Avatar url</th>
       <th>Gun url</th>
       <th colspan="3"></th>
@@ -14,10 +15,7 @@
   <tbody>
     <% @hunters.each do |hunter| %>
       <tr>
-        <!--<td><%= hunter.avatar_url %></td>
-        <td><%= hunter.gun_url %></td>-->
-        <td><%= image_tag hunter.avatar_url, width:100, height: 100 %></td>
-        <td><%= image_tag hunter.gun_url, width:100, height: 100 %></td>
+        <%= render "hunters/hunter_view/index_description", hunter: hunter %>
         <td><%= link_to 'Show', hunter %></td>
         <td><%= link_to 'Edit', edit_hunter_path(hunter) %></td>
         <td><%= link_to 'Destroy', hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -18,10 +18,7 @@
       <tr>
         <td><%= post.name %></td>
         <td><%= post.title %></td>
-        <% if post.hunter %>
-          <td><%= image_tag post&.hunter&.avatar_url, width:100, height: 100 %></td>
-          <td><%= image_tag post&.hunter&.gun_url, width:100, height: 100 %></td>
-        <% end %>
+        <%= render "posts/hunter_details/index_description", post: post if post.hunter %>
         <td><%= link_to t('links.show'), post %></td>
         <td><%= link_to t('links.edit'), edit_post_path(post) %></td>
         <td><%= link_to t('links.delete'), post, method: :delete, data: { confirm: t('links.confirm') } %></td>

@@ -25,7 +25,7 @@ class HuntersController < ApplicationController
 
     respond_to do |format|
       if @hunter.save
-        format.html { redirect_to hunter_url(@hunter), notice: "Hunter was successfully created." }
+        format.html { redirect_to hunter_url(@hunter), notice: "Hunter foi criado!" }
         format.json { render :show, status: :created, location: @hunter }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class HuntersController < ApplicationController
   def update
     respond_to do |format|
       if @hunter.update(hunter_params)
-        format.html { redirect_to hunter_url(@hunter), notice: "Hunter was successfully updated." }
+        format.html { redirect_to hunter_url(@hunter), notice: "Hunter foi atualizado!." }
         format.json { render :show, status: :ok, location: @hunter }
       else
         format.html { render :edit, status: :unprocessable_entity }
