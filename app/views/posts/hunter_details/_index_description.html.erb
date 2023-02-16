@@ -1,2 +1,3 @@
 <td><%= image_tag(post.hunter.avatar_url || "https://www.ofertadia.com.br/wp-content/themes/deals/images/store-default.png", width:100, height: 100) %></td>
 <td><%= image_tag(post.hunter.gun_url || "https://www.ofertadia.com.br/wp-content/themes/deals/images/store-default.png", width:100, height: 100) %></td>
+<%= render "posts/hunter_details/index_description", post: post if post.hunter %>

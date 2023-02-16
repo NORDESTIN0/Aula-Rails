@@ -20,14 +20,13 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
   <div class="field">
     <%= form.label :mining_type_id %>
     <%= form.select("mining_type_id", @mining_type_options, { include_blank: 'Selecione uma opção' }) %>
   </div>
   <div class="field">
-    <%= form.label :hunter_id %>
-    <%= form.select(:hunter_id, @hunter_options, { include_blank: 'Selecione uma opção' }) %>
+    <%= form.label :hunters_id %>
+    <%= form.select("hunters_id", @hunters_options, { include_blank: 'Selecione uma opção' }) %>
   </div>
 
 

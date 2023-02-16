@@ -14,8 +14,9 @@ class HuntersTest < ApplicationSystemTestCase
     visit hunters_url
     click_on "New Hunter"
 
-    fill_in "Avatar url", with: @hunter.avatar_url
-    fill_in "Gun url", with: @hunter.gun_url
+    fill_in "Gun", with: @hunter.gun
+    fill_in "Image", with: @hunter.image
+    fill_in "Name", with: @hunter.name
     click_on "Create Hunter"
 
     assert_text "Hunter was successfully created"
@@ -26,8 +27,9 @@ class HuntersTest < ApplicationSystemTestCase
     visit hunters_url
     click_on "Edit", match: :first
 
-    fill_in "Avatar url", with: @hunter.avatar_url
-    fill_in "Gun url", with: @hunter.gun_url
+    fill_in "Gun", with: @hunter.gun
+    fill_in "Image", with: @hunter.image
+    fill_in "Name", with: @hunter.name
     click_on "Update Hunter"
 
     assert_text "Hunter was successfully updated"

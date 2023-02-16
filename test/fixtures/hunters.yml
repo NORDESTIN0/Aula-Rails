@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  avatar_url: MyString
-  gun_url: MyString
+  name: MyString
+  image: MyString
+  gun: MyString
 
 two:
-  avatar_url: MyString
-  gun_url: MyString
+  name: MyString
+  image: MyString
+  gun: MyString

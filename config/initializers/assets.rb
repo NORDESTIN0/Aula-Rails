@@ -12,3 +12,17 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w(  
+     application.js
+     welcome.js
+     cable.js
+     hunters.js
+     mining_types.js
+     posts.js
+)
+Rails.application.config.assets.precompile += %w( welcome.css
+     hunters.css
+     mining_types.css
+     posts.css
+     scaffolds.css
+ )

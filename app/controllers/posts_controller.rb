@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :set_mining_type_options, only: [:new, :edit, :update, :create]
-  before_action :set_hunter_options, only: [:new, :edit, :update, :create]
-
+  before_action :set_hunters, only: [:new, :edit, :update, :create]
   # GET /posts or /posts.json
   def index
     @posts = Post.all
@@ -64,10 +63,13 @@ class PostsController < ApplicationController
   def set_mining_type_options
     @mining_type_options = MiningType.all.pluck(:name, :id)
   end
-  
-  def set_hunter_options
-    @hunter_options = Hunter.all.pluck(:avatar_url, :id)
+  def set_hunters
+    @hunters_options = Hunter.all.pluck(:name, :id)
   end
+  
+  #def set_hunter_options
+    #@hunter_options = Hunter.all.pluck(:avatar_url, :id)
+  #end
   # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
@@ -75,6 +77,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :mining_type_id, :hunter_id)
+      params.require(:post).permit(:name, :title, :mining_type_id, :hunters_options_id)
     end
 end

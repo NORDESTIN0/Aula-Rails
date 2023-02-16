@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_03_173634) do
+ActiveRecord::Schema.define(version: 2023_02_10_172709) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "hunters", force: :cascade do |t|
-    t.string "avatar_url"
-    t.string "gun_url"
+    t.string "name"
+    t.string "image"
+    t.string "gun"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "hunters_posts", id: false, force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "hunter_id", null: false
   end
 
   create_table "mining_types", force: :cascade do |t|
@@ -26,23 +35,14 @@ ActiveRecord::Schema.define(version: 2023_02_03_173634) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pc_types", force: :cascade do |t|
-    t.string "name"
-    t.string "acronym"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "mining_type_id"
-    t.integer "hunter_id"
-    t.integer "hunters_id"
-    t.index ["hunters_id"], name: "index_posts_on_hunters_id"
+    t.bigint "mining_type_id"
     t.index ["mining_type_id"], name: "index_posts_on_mining_type_id"
   end
 
+  add_foreign_key "posts", "mining_types"
 end

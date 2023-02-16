@@ -17,7 +17,7 @@ class HuntersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create hunter" do
     assert_difference('Hunter.count') do
-      post hunters_url, params: { hunter: { avatar_url: @hunter.avatar_url, gun_url: @hunter.gun_url } }
+      post hunters_url, params: { hunter: { gun: @hunter.gun, image: @hunter.image, name: @hunter.name } }
     end
 
     assert_redirected_to hunter_url(Hunter.last)
@@ -34,7 +34,7 @@ class HuntersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update hunter" do
-    patch hunter_url(@hunter), params: { hunter: { avatar_url: @hunter.avatar_url, gun_url: @hunter.gun_url } }
+    patch hunter_url(@hunter), params: { hunter: { gun: @hunter.gun, image: @hunter.image, name: @hunter.name } }
     assert_redirected_to hunter_url(@hunter)
   end
 

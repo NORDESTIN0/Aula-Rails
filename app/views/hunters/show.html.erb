@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Avatar url:</strong>
-  <%= @hunter.avatar_url %>
+  <strong>Name:</strong>
+  <%= @hunter.name %>
 </p>
 
 <p>
-  <strong>Gun url:</strong>
-  <%= @hunter.gun_url %>
+  <strong>Image:</strong>
+  <%= @hunter.image %>
+</p>
+
+<p>
+  <strong>Gun:</strong>
+  <%= @hunter.gun %>
 </p>
 
 <%= link_to 'Edit', edit_hunter_path(@hunter) %> |
