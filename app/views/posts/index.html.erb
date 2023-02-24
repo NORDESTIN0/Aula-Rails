@@ -8,16 +8,26 @@
     <tr>
       <th><%= @posts.human_attribute_name(:name)%></th>
       <th><%= @posts.human_attribute_name(:title)%></th>
-      <th>Hunter</th>
+      <th>Hunter Name </th>
+      <th>Hunter Image </th>
       <th>Gun</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
-    <% @posts.each do |post, hunter| %>
+    <% @posts.each do |post| %>
       <tr>
         <td><%= post.name %></td>
         <td><%= post.title %></td>
+        <td>
+          <%=  (post.hunters.map(&:name).to_sentence) %>
+        </td>
+        <td>
+          <%= image_tag (post.hunters.map(&:image).to_sentence), width:100, height: 100 %>
+        </td>
+        <td>
+          <%= image_tag (post.hunters.map(&:gun).to_sentence), width:100, height: 100 %>
+        </td>
         <td><%= link_to t('links.show'), post %></td>
         <td><%= link_to t('links.edit'), edit_post_path(post) %></td>
         <td><%= link_to t('links.delete'), post, method: :delete, data: { confirm: t('links.confirm') } %></td>

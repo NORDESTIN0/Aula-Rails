@@ -1,4 +1,3 @@
 class Hunter < ApplicationRecord
-    has_many :posts_hunters
-    has_many :posts, through: :post_hunters
+    has_and_belongs_to_many :posts
 end
