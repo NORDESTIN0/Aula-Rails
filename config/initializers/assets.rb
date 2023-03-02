@@ -19,8 +19,6 @@ Rails.application.config.assets.precompile += %w(
      hunters.js
      mining_types.js
      posts.js
-     jquery.js
-     notify.js
 )
 Rails.application.config.assets.precompile += %w( welcome.css
      hunters.css
