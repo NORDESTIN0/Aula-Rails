@@ -1,12 +1,18 @@
-<ul> 
 <p><%= t('menu') %> <strong><%= t('actual_locale') %></strong></p>
-    <li> 
-    <%= link_to "Posts", posts_path %>
+<ul class="nav nav-pills">
+    <li class="nav-item"> 
+    <%=  link_to "Posts", posts_path, :class => "nav-link active" %>
     </li>
     <li> 
-    <%= link_to "Mining types", mining_types_path %>
+    <%= link_to "Mining types", mining_types_path, :class => "nav-link active" %>
     </li>
     <li> 
-    <%= link_to "Hunters", hunters_path %>
+    <%= link_to "Hunters", hunters_path, :class => "nav-link active" %>
     </li>
 </ul>
+<div class="row">
+    <%= link_to "Posts", posts_path, :class => "col-md-3 btn btn-primary", role: "button" %>
+    <%= link_to "Mining types", mining_types_path, :class => "col-md-3 btn btn-primary", role: "button" %>
+    <%= link_to "Hunters", hunters_path, :class => "col-md-3 btn btn-primary", role: "button" %>
+</div>
+<br>
