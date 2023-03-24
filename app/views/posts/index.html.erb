@@ -2,7 +2,7 @@
 
 <h1>Posts</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th><%= @posts.human_attribute_name(:name)%></th>
@@ -37,7 +37,7 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
-<br>
-<%= link_to 'Menu', root_path %>
+<%= link_to "New Post", new_post_path, class:"btn btn-primary btn-lg" , role:"button" %>
+<%= link_to "Menu", root_path, class:"btn btn-primary btn-lg" , role:"button" %>
+
 

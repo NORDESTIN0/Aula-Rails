@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2023_02_10_172709) do
   end
 
   create_table "hunters_posts", id: false, force: :cascade do |t|
-    t.bigint "post_id", null: false
     t.bigint "hunter_id", null: false
+    t.bigint "post_id", null: false
   end
 
   create_table "mining_types", force: :cascade do |t|

@@ -1,6 +1,8 @@
-<h1> Seja bem vindo! escolha seu idioma:</h1>
-<p><strong>Data:</strong> <%= l(Date.today)%> </p>
-<p> <%= link_to t('language.portuguese'), root_path(locale: 'pt-BR') %> </p>
-<p> <%= link_to t('language.english'), root_path(locale: 'en') %> </p>
-<%= render "menu" %>
-<p> <%= t('hello')%> </p>
+<div class="jumbotron">
+  <h1 class="display-4"> Seja bem vindo hunter!!</h1>
+  <p class="lead">Este é um site de Posts para hunters, por favor crie seu post ou cadastr-se como um Hunter</p>
+  <hr class="my-4">
+  <p>Informe qual cadastro deseja localizar ou criar.</p>
+  <%= render "menu" %>
+</div>
+
