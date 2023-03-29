@@ -1,4 +1,8 @@
 en:
+  welcome: "Welcome blessed Hunter"
+  message:
+    description: "This is a app to register and find hunters! Please creat a post or join as a Hunter!"
+    options: "Select wich register you want to locale or create."
   actual_locale: "English(International)"
   hello: "Hello world"
   menu: "Your current language is"

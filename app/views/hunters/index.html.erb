@@ -25,10 +25,6 @@
 </table>
 
 <br>
-<%= link_to new_hunter_path do %>
-<%= button_tag "New Hunter", class:"btn btn-primary col-md-1" %>
-<% end %>
 
-<%= link_to root_path do %>
-<%= button_tag "Menu", class:"btn btn-primary col-md-1" %>
-<% end %>
+<%= link_to "New Hunter", new_hunter_path, class:"btn btn-primary btn-lg" , role:"button" %>
+<%= link_to "Menu", root_path, class:"btn btn-primary btn-lg" , role:"button" %>

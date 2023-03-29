@@ -1,12 +1,16 @@
 pt-BR:
-  actual_locale: "Português do Brasil"
-  hello: "Bom dia!!"
-  menu: "Sua linguagem é"
-  links:
-      edit: "Editar"
-      show: "Mostrar"
-      delete: "Deletar"
-      confirm: "Você deseja deletar?"
-  language:
-      english: "Inglês"
-      portuguese: "Português"
+    welcome: "Seja bem vindo Hunter"
+    message:
+        description: "Este é um app para registrar e loclaizar hunters, por favor crie seu post ou cadastr-se como um Hunter"
+        options: "Informe qual cadastro deseja localizar ou criar."
+    actual_locale: "Português do Brasil"
+    hello: "Bom dia!!"
+    menu: "Sua linguagem é"
+    links:
+        edit: "Editar"
+        show: "Mostrar"
+        delete: "Deletar"
+        confirm: "Você deseja deletar?"
+    language:
+        english: "Inglês"
+        portuguese: "Português"
