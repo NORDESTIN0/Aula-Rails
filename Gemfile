@@ -9,6 +9,7 @@ gem 'rails-i18n', '~> 5.1'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'webpacker', '~> 3.0'
 
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server

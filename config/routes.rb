@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'homepage/index'
   resources :hunters
   resources :mining_types
   resources :posts
