@@ -2,7 +2,7 @@
 
 <h1>Mining Types</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -26,6 +26,9 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %>
-<br>
-<%= link_to 'Menu', root_path %>
+<%= link_to new_mining_type_path do %>
+<%= button_tag "New Mining Type", class:"btn btn-primary col-md-1" %>
+<% end %>
+<%= link_to root_path do %>
+<%= button_tag "Menu", class:"btn btn-primary col-md-1" %>
+<% end %>

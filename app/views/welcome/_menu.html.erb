@@ -1,7 +1,6 @@
-<p><%= t('menu') %> <strong><%= t('actual_locale') %></strong></p>
-<div class="row">
-    <%= link_to "Posts", posts_path, :class => "col-md-2" %>
-    <%= link_to "Mining types", mining_types_path, :class => "col-md-2" %>
-    <%= link_to "Hunters", hunters_path, :class => "col-md-2" %>
+<div>
+    <%= link_to "Posts", posts_path, class:"btn btn-primary btn-lg" , role:"button" %>
+    <%= link_to "Mining types", mining_types_path, class:"btn btn-primary btn-lg" , role:"button" %>
+    <%= link_to "Hunters", hunters_path, class:"btn btn-primary btn-lg" , role:"button" %>
 </div>
 <br>

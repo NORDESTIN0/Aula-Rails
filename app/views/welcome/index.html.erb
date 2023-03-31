@@ -1,6 +1,8 @@
-<h1> Seja bem vindo! escolha seu idioma:</h1>
-<p><strong>Data:</strong> <%= l(Date.today)%> </p>
-<p> <%= link_to t('language.portuguese'), root_path(locale: 'pt-BR') %> </p>
-<p> <%= link_to t('language.english'), root_path(locale: 'en') %> </p>
-<%= render "menu" %>
-<p> <%= t('hello')%> </p>
+<div class="jumbotron">
+  <h1 class="display-4"> <%=t('welcome')%> </h1>
+  <p class="lead"><%=t('message.description')%></p>
+  <hr class="my-4">
+  <p><%=t('message.options')%></p>
+  <%= render "menu" %>
+</div>
+
